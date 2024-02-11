@@ -78,6 +78,7 @@ def question1():
 def question2():
     answer = {}
 
+
     # Answers are floats
     answer["(a) entropy_entire_data"] = 0.
     # Infogain
@@ -102,19 +103,100 @@ def question2():
 def question3():
     answer = {}
 
+     ''' (a) class_co = 10
+             class_c1 = 10
+            tot = class_co + class_c1
+            p_co = class_co/tot
+            p_c1 = class_c1/tot
+            gini_index = 1 - (p_co**2 + p_c1**2)
+            print(gini_index)
+    '''
+
+    ''' (b) For each Customer ID there is no impurity , So Gini index is 0 '''
+
+    ''' (c) n_instances = 20
+        n_male = 10
+        n_female = 10
+        p_male = n_male / n_instances
+        p_female = n_female / n_instances
+        p_male_co = 6/n_male
+        p_male_c1 = 4/n_male
+        p_female_co = 4/n_female
+        p_female_c1 = 6/n_female
+        gini_male = 1 - (p_male_co ** 2  + p_male_c1 ** 2)
+        gini_female = 1 - (p_female_co ** 2 + p_female_c1 ** 2)
+        gender_gini_index = (p_male * gini_male) + (p_female * gini_female)
+        print(gender_gini_index)
+    '''
+
+
+    ''' (d) num_instances = 20
+        num_family = 4
+        num_sports = 8
+        num_luxury = 8
+        prob_family = num_family / num_instances
+        prob_sports = num_sports / num_instances
+        prob_luxury = num_luxury / num_instances
+        p_family_co = 1/num_family
+        p_family_c1 = 3/num_family
+        p_sports_co = 8/num_sports
+        p_sports_c1 = 0/num_sports
+        p_luxury_co = 1/num_luxury
+        p_luxury_c1 = 7/num_luxury
+        gini_family = 1 - (p_family_co ** 2  + p_family_c1 ** 2)
+        gini_sports = 1 - (p_sports_co ** 2  + p_sports_c1 ** 2)
+        gini_luxury = 1 - (p_luxury_co ** 2  + p_luxury_c1 ** 2)
+        overall_gini_index = prob_family * gini_family + prob_sports * gini_sports + prob_luxury * gini_luxury
+        print("Overall Gini index for Car Type (multiway split):", overall_gini_index)
+    '''
+
+    ''' (e)
+    num_instances = 20
+    num_small = 5
+    num_medium = 7
+    num_large = 4
+    num_extra_large = 4
+    
+    prob_small = num_small / num_instances
+    prob_medium = num_medium/ num_instances
+    prob_large = num_large / num_instances
+    prob_extra_large = num_extra_large/ num_instances
+    
+    p_small_co = 3/num_small
+    p_small_c1 = 2/num_small
+    
+    p_medium_co = 3/num_medium 
+    p_medium_c1 = 4/num_medium 
+    
+    p_large_co = 2/num_large
+    p_large_c1 = 2/num_large
+    
+    p_extra_large_co = 2/num_extra_large
+    p_extra_large_c1 = 2/num_extra_large
+    
+    gini_small = 1 - (p_small_co ** 2  + p_small_c1 ** 2)
+    gini_medium = 1 - (p_medium_co ** 2  + p_medium_c1 ** 2)
+    gini_large = 1 - (p_large_co ** 2  + p_large_c1 ** 2)
+    gini_extra_large = 1 - (p_extra_large_co ** 2  + p_extra_large_c1 ** 2)
+
+    overall_gini_index = prob_small * gini_small + prob_medium * gini_medium + prob_large * gini_large + prob_extra_large * gini_extra_large
+
+    print(overall_gini_index)
+    '''
+
     # float
-    answer["(a) Gini, overall"] = 0.
+    answer["(a) Gini, overall"] = 0.5
 
     # float
     answer["(b) Gini, ID"] = 0.0
-    answer["(c) Gini, Gender"] = 0.
-    answer["(d) Gini, Car type"] = 0.
-    answer["(e) Gini, Shirt type"] = 0.
+    answer["(c) Gini, Gender"] = 0.48
+    answer["(d) Gini, Car type"] = 0.163
+    answer["(e) Gini, Shirt type"] = 0.4915
 
-    answer["(f) attr for splitting"] = ""
+    answer["(f) attr for splitting"] = "Car type"
 
     # Explanatory text string
-    answer["(f) explain choice"] = ""
+    answer["(f) explain choice"] = "Car type has the lowest Gini index"
 
     return answer
 
