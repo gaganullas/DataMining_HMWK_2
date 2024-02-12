@@ -319,20 +319,116 @@ def question6():
 def question7():
     answer = {}
 
+    ''' a) import math
+
+        total_instances = 20
+        positive_instances = 10
+        negative_instances = 10
+        
+        p_positive_before = positive_instances / total_instances
+        p_negative_before = negative_instances / total_instances
+        
+        entropy_before = -((p_positive_before * math.log2(p_positive_before)) + (p_negative_before * math.log2(p_negative_before)))
+        
+        entropy_after = 0
+        
+        information_gain = entropy_before - entropy_after
+        
+        print(information_gain)
+     '''
+     ''' b)
+     import math
+        total_instances = 20
+        positive_left = 9
+        negative_left = 1
+        positive_right = 1
+        negative_right = 9
+        
+        p_positive_before = (positive_left + positive_right) / total_instances
+        p_negative_before = (negative_left + negative_right) / total_instances
+        
+        entropy_before = -((p_positive_before * math.log2(p_positive_before)) + (p_negative_before * math.log2(p_negative_before)))
+        
+        n_left = positive_left + negative_left
+        n_right = positive_right + negative_right
+        p_left = n_left / total_instances
+        p_right = n_right / total_instances
+        
+        entropy_left = -((positive_left / n_left * math.log2(positive_left / n_left)) + (negative_left / n_left * math.log2(negative_left / n_left)))
+        entropy_right = -((positive_right / n_right * math.log2(positive_right / n_right)) + (negative_right / n_right * math.log2(negative_right / n_right)))
+        
+        information_gain = entropy_before - (p_left * entropy_left + p_right * entropy_right)
+        
+        print(information_gain)
+    '''
+    '''
+    d. import math
+
+    total_instances = 20
+    positive_instances = 10
+    negative_instances = 10
+    num_unique_ids = 20  
+    
+    p_positive = positive_instances / total_instances
+    p_negative = negative_instances / total_instances
+    entropy_before_split = - (p_positive * math.log2(p_positive) + p_negative * math.log2(p_negative))
+    
+    
+    entropy_after_split_weighted_avg = 0
+    
+    information_gain = entropy_before_split - entropy_after_split_weighted_avg
+    
+    split_information = - sum([(1 / num_unique_ids) * math.log2(1 / num_unique_ids) for _ in range(num_unique_ids)])
+    
+    gain_ratio = information_gain / split_information
+    
+    print("Gain Ratio:", gain_ratio)
+    '''
+    '''
+    e. import math
+
+    total_instances = 20
+    positive_left = 9
+    negative_left = 1
+    positive_right = 1
+    negative_right = 9
+    
+    p_positive = (positive_left + positive_right) / total_instances
+    p_negative = (negative_left + negative_right) / total_instances
+    entropy_before_split = - (p_positive * math.log2(p_positive) + p_negative * math.log2(p_negative))
+    
+    p_positive_left = positive_left / (positive_left + negative_left)
+    p_negative_left = negative_left / (positive_left + negative_left)
+    entropy_left = - (p_positive_left * math.log2(p_positive_left) + p_negative_left * math.log2(p_negative_left))
+    
+    p_positive_right = positive_right / (positive_right + negative_right)
+    p_negative_right = negative_right / (positive_right + negative_right)
+    entropy_right = - (p_positive_right * math.log2(p_positive_right) + p_negative_right * math.log2(p_negative_right))
+    
+    entropy_after_split_weighted_avg = (positive_left + negative_left) / total_instances * entropy_left + (positive_right + negative_right) / total_instances * entropy_right
+    
+    split_information = - ((10 / 20) * math.log2(10 / 20) + (10 / 20) * math.log2(10 / 20))
+    
+    information_gain = entropy_before_split - entropy_after_split_weighted_avg
+    gain_ratio = information_gain / split_information
+    
+    print("Gain Ratio for Handedness:", gain_ratio)
+    '''
+    
     # float
-    answer["a, info gain, ID"] = 0.
-    answer["b, info gain, Handedness"] = 0.
+    answer["a, info gain, ID"] = 1.0
+    answer["b, info gain, Handedness"] = 0.531
 
     # string: "ID" or "Handedness"
-    answer["c, which attrib"] = ""
+    answer["c, which attrib"] = "Handedness"
 
     # answer is a float
-    answer["d, gain ratio, ID"] = 0.
-    answer["e, gain ratio, Handedness"] = 0.
+    answer["d, gain ratio, ID"] = 0.231
+    answer["e, gain ratio, Handedness"] = 0.531
 
     # string: one of 'ID' or 'Handedness' based on gain ratio
     # choose the attribute with the largest gain ratio
-    answer["f, which attrib"] = ""
+    answer["f, which attrib"] = "Handedness"
 
     return answer
 
