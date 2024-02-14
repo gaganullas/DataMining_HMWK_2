@@ -196,8 +196,8 @@ def question3():
     # float
     answer["(b) Gini, ID"] = 0.0
     answer["(c) Gini, Gender"] = 0.48
-    answer["(d) Gini, Car type"] = 0.163
-    answer["(e) Gini, Shirt type"] = 0.4915
+    answer["(d) Gini, Car type"] = 0.1622
+    answer["(e) Gini, Shirt type"] = 0.4914
 
     answer["(f) attr for splitting"] = "Car type"
 
@@ -258,7 +258,7 @@ def question4():
     answer["k"] = ['continuous','quantitative','ratio']
     answer["k: explain"] = "It can be interval attribute as well if distance of 0 from the center of campus is considered as an arbitrary origin"
 
-    answer["l"] = ['discrete','quantitative','ratio']
+    answer["l"] = ['continuous','quantitative','ratio']
     answer["l: explain"] = ""
 
     answer["m"] = ['discrete','qualitative','nominal']
