@@ -109,18 +109,18 @@ def question2():
 def question3():
     answer = {}
 
-     ''' (a) class_co = 10
+     """ (a) class_co = 10
              class_c1 = 10
             tot = class_co + class_c1
             p_co = class_co/tot
             p_c1 = class_c1/tot
             gini_index = 1 - (p_co**2 + p_c1**2)
             print(gini_index)
-    '''
+    """
 
-    ''' (b) For each Customer ID there is no impurity , So Gini index is 0 '''
+    """ (b) For each Customer ID there is no impurity , So Gini index is 0 """
 
-    ''' (c) n_instances = 20
+    """ (c) n_instances = 20
         n_male = 10
         n_female = 10
         p_male = n_male / n_instances
@@ -133,10 +133,10 @@ def question3():
         gini_female = 1 - (p_female_co ** 2 + p_female_c1 ** 2)
         gender_gini_index = (p_male * gini_male) + (p_female * gini_female)
         print(gender_gini_index)
-    '''
+    """
 
 
-    ''' (d) num_instances = 20
+    """ (d) num_instances = 20
         num_family = 4
         num_sports = 8
         num_luxury = 8
@@ -154,9 +154,9 @@ def question3():
         gini_luxury = 1 - (p_luxury_co ** 2  + p_luxury_c1 ** 2)
         overall_gini_index = prob_family * gini_family + prob_sports * gini_sports + prob_luxury * gini_luxury
         print("Overall Gini index for Car Type (multiway split):", overall_gini_index)
-    '''
+   """
 
-    ''' (e)
+    """(e)
     num_instances = 20
     num_small = 5
     num_medium = 7
@@ -188,7 +188,7 @@ def question3():
     overall_gini_index = prob_small * gini_small + prob_medium * gini_medium + prob_large * gini_large + prob_extra_large * gini_extra_large
 
     print(overall_gini_index)
-    '''
+    """
 
     # float
     answer["(a) Gini, overall"] = 0.5
@@ -325,7 +325,7 @@ def question6():
 def question7():
     answer = {}
 
-    ''' a) import math
+    """ a) import math
 
         total_instances = 20
         positive_instances = 10
@@ -341,8 +341,8 @@ def question7():
         information_gain = entropy_before - entropy_after
         
         print(information_gain)
-     '''
-     ''' b)
+   """
+     """ b)
      import math
         total_instances = 20
         positive_left = 9
@@ -366,8 +366,8 @@ def question7():
         information_gain = entropy_before - (p_left * entropy_left + p_right * entropy_right)
         
         print(information_gain)
-    '''
-    '''
+  """
+ """
     d. import math
 
     total_instances = 20
@@ -389,8 +389,8 @@ def question7():
     gain_ratio = information_gain / split_information
     
     print("Gain Ratio:", gain_ratio)
-    '''
-    '''
+ """
+ """
     e. import math
 
     total_instances = 20
@@ -419,7 +419,7 @@ def question7():
     gain_ratio = information_gain / split_information
     
     print("Gain Ratio for Handedness:", gain_ratio)
-    '''
+  """
     
     # float
     answer["a, info gain, ID"] = 1.0
