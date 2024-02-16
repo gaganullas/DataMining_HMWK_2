@@ -110,7 +110,6 @@ def question2():
     B.insert_right("A")
     E.insert_left("A")
     E.insert_right("C")
-    
     answer["(d) full decision tree"] = tree
 
     return answer
