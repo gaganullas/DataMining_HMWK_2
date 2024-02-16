@@ -56,7 +56,7 @@ def question1():
     level2_right["cough_info_gain"] = 0.3219
 
     level2_right["weight_loss"] = - 1.0
-    level2_right["weight_loss_info_gain"] = 0.1709
+    level2_right["weight_loss_info_gain"] = 0.1711
 
     answer["level1"] = level1
     answer["level2_left"] = level2_left
