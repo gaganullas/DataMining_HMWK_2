@@ -251,7 +251,7 @@ def question6():
     A = tree.insert_left("y<=0.4")
     B = tree.insert_right("A")
     A.insert_left("A")
-    A.insert_right"B")
+    A.insert_right("B")
 
     answer["c, tree"] = tree
 
